@@ -1,0 +1,17 @@
+<h1><%= @restaurant.name %> <%= "🌟" * @restaurant.rating %></h1>
+
+
+<p><%= @restaurant.address %></p>
+
+
+<%= link_to "Delete the restaurant",
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<%= link_to "Back to all", restaurants_path %>
+
+
+<%# <%= link_to "text to be displayed on the link",
+<%#   url_to_go_to,
+<%#   options %>
